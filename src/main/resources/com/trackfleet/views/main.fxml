@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.trackfleet.controllers.MainController">
+    <left>
+        <VBox prefWidth="150" spacing="10" style="-fx-background-color: #f4f4f4; -fx-padding: 10;">
+            <Button text="Dashboard" onAction="#showDashboard" maxWidth="Infinity"/>
+            <Button text="Create Parcel" onAction="#showCreateParcel" maxWidth="Infinity"/>
+            <Button text="Tracking" onAction="#showTracking" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox alignment="CENTER">
+            <Label text="Welcome to TrackFleet" style="-fx-font-size: 24px;"/>
+        </VBox>
+    </center>
+</BorderPane>

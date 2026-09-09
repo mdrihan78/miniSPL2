@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="15" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.trackfleet.controllers.TrackingController">
+    <Label text="Parcel Tracking" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="trackingField" promptText="Enter Tracking Number"/>
+        <Button text="Search" onAction="#searchParcel"/>
+    </HBox>
+    
+    <Label fx:id="statusLabel" text="Current Status: N/A" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+    <Button text="Advance State (Simulate Delivery Process)" onAction="#advanceState"/>
+    
+    <TableView fx:id="logTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="statusCol" text="Status" prefWidth="150"/>
+            <TableColumn fx:id="timeCol" text="Timestamp" prefWidth="200"/>
+            <TableColumn fx:id="remarksCol" text="Remarks" prefWidth="250"/>
+        </columns>
+    </TableView>
+</VBox>
